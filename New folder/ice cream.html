@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Scoops | Premium Ice Cream</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #222;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 25px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #b5835a;
+        }
+
+        /* Hero Section with BG Image */
+        header {
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* Yahan Hero background image hai */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 10%;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        /* Menu Grid */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Product Cards */
+        .menu-card {
+            background: #fff;
+            border: 1px solid #eee;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden; /* Taaki image bahar na nikle */
+            z-index: 1;
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        /* BG Image Hover Effect on Card */
+        .menu-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: #b5835a; /* Gold color */
+            z-index: -1;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .menu-card:hover::before {
+            transform: translateY(0);
+        }
+
+    
+}
+        .menu-card:hover p, .menu-card:hover .price {
+            color: #f1f1f1;
+        }
+
+        .menu-card:hover img {
+            transform: scale(1.1); /* Image halki si zoom hogi */
+        }
+
+        .menu-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .menu-card p {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #b5835a;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            nav { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="brand-name">ARTISAN SCOOPS</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Crafted Cold Excellence</h1>
+        <p>Experience the finest small-batch ice cream made with organic ingredients and traditional techniques.</p>
+    </header>
+
+    <section id="about">
+        <h2>Our Story</h2>
+        <div class="about-content">
+            <p>Founded on the principle of purity, Artisan Scoops brings a sophisticated touch to the world’s favorite dessert. We source our dairy from local high-altitude farms and hand-pick our seasonal fruits to ensure every scoop meets our rigorous standards.</p>
+        </div>
+    </section>
+
+    <section id="menu" style="background-color: #fff;">
+        <h2>The Collection</h2>
+        <div class="menu-grid">
+            
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=400" alt="Vanilla">
+                <div class="card-body">
+                    <h3>Madagascar Vanilla</h3>
+                    <p>Pure double-fold vanilla bean extract for a rich finish.</p>
+                    <div class="price">$6.00</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400" alt="Chocolate">
+                <div class="card-body">
+                    <h3>Midnight Cocoa</h3>
+                    <p>70% dark Belgian chocolate infused with sea salt.</p>
+                    <div class="price">$6.50</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?q=80&w=744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pistachio">
+                <div class="card-body">
+                    <h3>Sicilian Pistachio</h3>
+                    <p>Roasted pistachios ground into a smooth, buttery paste.</p>
+                    <div class="price">$7.50</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400" alt="Lavender">
+                <div class="card-body">
+                    <h3>Lavender Honey</h3>
+                    <p>Wildflower honey with subtle notes of French lavender.</p>
+                    <div class="price">$7.00</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400" alt="Espresso">
+                <div class="card-body">
+                    <h3>Espresso Roast</h3>
+                    <p>Freshly pulled Arabica espresso shots folded into cream.</p>
+                    <div class="price">$6.50</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=400" alt="Strawberry">
+                <div class="card-body">
+                    <h3>Summer Strawberry</h3>
+                    <p>Hand-picked berries swirled into a refreshing base.</p>
+                    <div class="price">$6.00</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=400" alt="Caramel">
+                <div class="card-body">
+                    <h3>Salted Caramel</h3>
+                    <p>House-made burnt sugar caramel with Fleur de Sel.</p>
+                    <div class="price">$6.50</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1629385697093-57be2cc97fa6?q=80&w=1061&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=400" alt="Mint">
+                <div class="card-body">
+                    <h3>Mint Infusion</h3>
+                    <p>Steeped fresh mint leaves with shavings of chocolate.</p>
+                    <div class="price">$6.50</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1543255006-d6395b6f1171?w=400" alt="Pecan">
+                <div class="card-body">
+                    <h3>Maple Pecan</h3>
+                    <p>Grade A maple syrup with butter-roasted southern pecans.</p>
+                    <div class="price">$7.00</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1594067831487-acf1381f1f48?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=400" alt="Blueberry">
+                <div class="card-body">
+                    <h3>Wild Blueberry</h3>
+                    <p>A vibrant purple scoop made with wild berries.</p>
+                    <div class="price">$6.50</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2026 ARTISAN SCOOPS PREMIUM ICE CREAM. ALL RIGHTS RESERVED.</p>
+        <p style="margin-top: 10px; color: #888;">123 Flavor Avenue, Culinary District</p>
+    </footer>
+
+</body>
+</html>

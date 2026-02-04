@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+/* HEADER */
+.header {
+  background: lightblue;
+  white-space: normal;
+  border-bottom: 1px solid #eee;
+  
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  color: #fff;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* HERO */
+.hero {
+  background: #eaf6ff;
+  padding: 70px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.hero-buttons .btn {
+  margin: 5px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 5px;
+  background-color: lightgreen;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn.secondary {
+  background: #25D366;
+  color: #fff;
+}
+
+.btn.small {
+  margin-top: 15px;
+  background: #007bff;
+  color: #fff;
+}
+
+/* SECTIONS */
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+/* SERVICES */
+.services {
+  padding: 60px 0;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  border: 1px solid #eee;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  background: #f1f7ff;
+}
+
+.service-card h3 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+}
+
+.price {
+  display: block;
+  margin: 15px 0;
+  font-weight: 700;
+}
+
+/* WHY US */
+.why-us {
+  background: #f9f9f9;
+  padding: 60px 0;
+}
+
+.why-us ul {
+  max-width: 600px;
+  margin: auto;
+}
+
+.why-us li {
+  margin-bottom: 12px;
+}
+
+/* BUDGET PROOF */
+.budget-proof {
+  padding: 60px 0;
+}
+
+.budget-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.budget-box {
+  background: #eaf6ff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* CONTACT */
+.contact {
+  background: #f1f7ff;
+  padding: 60px 0;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form select {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+.footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+.footer ul{
+  list-style: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+}
